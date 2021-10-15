@@ -15,9 +15,5 @@ let server = http.listen(80, () => {
 });
 
 app.get('/', function(req,res) {
-
-
-        res.sendFile(__dirname + '/index.html');
-        
-  
+        //res.sendFile(__dirname + '/index.html');     
 }); 
