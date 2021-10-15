@@ -10,7 +10,7 @@ let que = [];
 app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
 
-let server = http.listen(3001, () => {
+let server = http.listen(80, () => {
     console.log('server is running on port ' + server.address().port);
 });
 
