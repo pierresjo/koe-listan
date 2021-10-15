@@ -14,6 +14,8 @@ let server = http.listen(80, () => {
     console.log('server is running on port ' + server.address().port);
 });
 
+/*
 app.get('/', function(req,res) {
         //res.sendFile(__dirname + '/index.html');     
 }); 
+*/
