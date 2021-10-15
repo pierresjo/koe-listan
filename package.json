@@ -1,17 +1,19 @@
 {
-  "name": "w2",
+  "name": "koe-listan",
   "version": "1.0.0",
-  "description": "",
+  "description": "no",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierresjo/koe-listan.git"
+  },
+  "author": "Pierre Sjöberg",
   "license": "ISC",
-  "dependencies": {
-    "cookie-parser": "^1.4.5",
-    "express": "^4.17.1",
-    "socket.io": "^4.0.2"
-  }
+  "bugs": {
+    "url": "https://github.com/pierresjo/koe-listan/issues"
+  },
+  "homepage": "https://github.com/pierresjo/koe-listan#readme"
 }
