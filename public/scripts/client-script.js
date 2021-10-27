@@ -37,7 +37,7 @@ socket.on('updateList', (data) => {
 
     let listholder = document.querySelector('#list');
     listholder.innerHTML = null;
-    listholder.style = 'list-style-type: decimal; font-weight: bold; font-size: 2rem;';
+    listholder.style = 'margin-left: 38px; list-style-type: decimal; font-weight: bold; font-size: 2rem;';
 
     data.forEach(element => {
         let li = document.createElement('li');
