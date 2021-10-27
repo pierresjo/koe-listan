@@ -37,12 +37,12 @@ socket.on('updateList', (data) => {
 
     let listholder = document.querySelector('#list');
     listholder.innerHTML = null;
-    listholder.style.listStyleType = 'decimal';
+    listholder.style = 'list-style-type: decimal; font-weight: bold; font-size: 2rem;';
 
     data.forEach(element => {
         let li = document.createElement('li');
         li.textContent = element.grupp;
-        li.classList.add('list-group-item');       
+        //li.classList.add('list-group-item');       
         listholder.appendChild(li);
     });
 
