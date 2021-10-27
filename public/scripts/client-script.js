@@ -42,6 +42,7 @@ socket.on('updateList', (data) => {
         let li = document.createElement('li');
         li.textContent = element.grupp;
         li.classList.add('list-group-item');
+        li.style.listStyleType = 'decimal';
         listholder.appendChild(li);
     });
 
