@@ -7,6 +7,9 @@ const io = require('socket.io')(http);
 const mymodule = require('./my-module.js');
 let que = [];
 
+//För att kunna köras i iframe?
+app.set('trust proxy', 1);
+
 app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
 
