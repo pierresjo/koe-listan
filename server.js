@@ -40,7 +40,7 @@ app.post('/', function (req,res) {
     let cookie = req.cookies.nickName;
 
     if(cookie==null) {
-        res.cookie('nickName', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false, sameSite: "none"});
+        res.cookie('nickName', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false, secure: false, sameSite: "none"});
     }
 
     res.redirect('/');
