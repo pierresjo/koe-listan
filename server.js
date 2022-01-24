@@ -39,6 +39,7 @@ app.get('/', function(req,res) {
 
 app.post('/', function (req,res) {
     let cookie = req.cookies.nickName;
+	let cookie2 = req.cookies.nickName2;
 
     if(cookie==null && cookie2==null) {
         res.cookie('nickName', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false, secure: true, sameSite: "none"});
