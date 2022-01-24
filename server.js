@@ -25,7 +25,7 @@ app.get('/', function(req,res) {
     if(cookie==null && cookie2==null) {
         res.sendFile(__dirname + '/loggain.html');
     }
-    else if(cookie==='secretAdmin' || cookie2==='scretAdmin') {
+    else if(cookie==='secretAdmin' || cookie2==='secretAdmin') {
         res.sendFile(__dirname + '/secretAdmin.html');
         
     }
