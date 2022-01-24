@@ -20,7 +20,7 @@ let server = http.listen(process.env.PORT || 5000, () => {
 app.get('/', function(req,res) {
 
     let cookie = req.cookies.nickName;
-	let cookie2 = req.cookies.nickName-2;
+	let cookie2 = req.cookies.nickName2;
 
     if(cookie==null && cookie2==null) {
         res.sendFile(__dirname + '/loggain.html');
@@ -42,7 +42,7 @@ app.post('/', function (req,res) {
 
     if(cookie==null && cookie2==null) {
         res.cookie('nickName', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false, secure: true, sameSite: "none"});
-		res.cookie('nickName-2', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false});
+		res.cookie('nickName2', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false});
     }
 
     res.redirect('/');
@@ -64,8 +64,8 @@ io.on('connection', function(socket) {
     if(cookielist.nickName!=null) {
         socket.nickName = cookielist.nickName;        
     }
-	if(cookielist.nickName-2!=null) {
-        socket.nickName = cookielist.nickName;        
+	if(cookielist.nickName2!=null) {
+        socket.nickName = cookielist.nickName2;        
     }
 
     io.emit('updateList', que);
