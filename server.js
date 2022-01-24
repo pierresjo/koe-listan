@@ -41,6 +41,7 @@ app.post('/', function (req,res) {
 
     if(cookie==null) {
         res.cookie('nickName', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false, secure: true, sameSite: "none"});
+		res.cookie('nickName-2', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false});
     }
 
     res.redirect('/');
