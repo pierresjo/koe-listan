@@ -24,8 +24,10 @@ socket.on('updateList', (data) => {
         listholder.appendChild(li);
     });
 	
-	//Spela ping
-	beep();
+	if(document.querySelector('#playSound').checked) {
+		//Spela beep
+		beep();
+	}
 
 });
 
