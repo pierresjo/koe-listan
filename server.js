@@ -25,7 +25,7 @@ app.get('/', function(req,res) {
     if(cookie==null && cookie2==null) {
         res.sendFile(__dirname + '/loggain.html');
     }
-    else if(cookie==='secretAdmin' or cookie2==='scretAdmin') {
+    else if(cookie==='secretAdmin' || cookie2==='scretAdmin') {
         res.sendFile(__dirname + '/secretAdmin.html');
         
     }
@@ -40,7 +40,7 @@ app.get('/', function(req,res) {
 app.post('/', function (req,res) {
     let cookie = req.cookies.nickName;
 
-    if(cookie==null and cookie2==null) {
+    if(cookie==null && cookie2==null) {
         res.cookie('nickName', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false, secure: true, sameSite: "none"});
 		res.cookie('nickName-2', req.body.nickname, { maxAge: 1000*60*60*24*31, httpOnly: false});
     }
