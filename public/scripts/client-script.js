@@ -4,10 +4,10 @@ let socket = io();
 window.addEventListener('load', ()=> {
 	
 	if (getCookie('nickName') != null) {
-		document.querySelector('#').textContent='Kölista - ' + getCookie('nickName');
+		document.querySelector('#rubrik').textContent='Kölista - ' + getCookie('nickName');
 	}
 	else if(getCookie('nickName2') != null) {
-		document.querySelector('#').textContent='Kölista - ' + getCookie('nickName2');
+		document.querySelector('#rubrik').textContent='Kölista - ' + getCookie('nickName2');
 	}
 	
 
