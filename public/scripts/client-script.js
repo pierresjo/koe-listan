@@ -55,9 +55,10 @@ socket.on('updateList', (data) => {
     });
 
 	if(data.length<1) {
-		let li = document.createElement('li');
-		li.textContent = 'Det är för närvande ingen i kön';
-		listholder.appendChild(li);
+		document.querySelector('#tom').textContent = 'Det är för närvande ingen i kön';
+	}
+	else {
+		document.querySelector('#tom').textContent = '';
 	}
 });
 
