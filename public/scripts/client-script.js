@@ -3,10 +3,10 @@ let socket = io();
 
 window.addEventListener('load', ()=> {
 	
-	if (getCookie('nickName')!=null) {
+	if (getCookie('nickName') != null) {
 		document.querySelector('#').textContent='Kölista - ' + getCookie('nickName');
 	}
-	else if((getCookie('nickName2')!=null) {
+	else if(getCookie('nickName2') != null) {
 		document.querySelector('#').textContent='Kölista - ' + getCookie('nickName2');
 	}
 	
