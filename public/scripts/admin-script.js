@@ -7,10 +7,13 @@ window.addEventListener('load', ()=> {
 
 socket.on('updateList', (data) => {
 
+    let oldAntal = document.querySelectorAll('#list>li').length;
+    let newAntal = 0;
     let listholder = document.querySelector('#list');
     listholder.innerHTML = null;
 
     data.forEach(element => {
+        newAntal++;
         let li = document.createElement('li');
         li.innerHTML = "<b>" + element.grupp + "</b><br>" + element.msg;
         li.classList.add('list-group-item');
@@ -24,7 +27,7 @@ socket.on('updateList', (data) => {
         listholder.appendChild(li);
     });
 	
-	if(document.querySelector('#playSound').checked) {
+	if(newAntal != oldAntal && document.querySelector('#playSound').checked) {
 		//Spela beep
 		beep();
 	}
